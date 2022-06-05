@@ -3,13 +3,13 @@ Console.WriteLine("Welcome to my app!");
 
 LinqQueries queries = new LinqQueries();
 
-PrintValues(queries.BookList());
+PrintValues(queries.ListaDeLibros());
 
-void PrintValues( List<Book> bookList)
+void PrintValues( List<Book> ListadeLibros)
 {
     //Console.WriteLine($"--------------- Title ----- PageCount ----- Published Date ---------------");
     Console.WriteLine("{0,-70} {1,7} {2,11}\n", "Title", "PageCount", "Published date");
-    foreach(var item in bookList)
+    foreach(var item in ListadeLibros)
     {
         Console.WriteLine("{0,-70} {1,7} {2,11}",item.Title,item.PageCount,item.PublishedDate.Date.ToShortDateString()); 
     }
